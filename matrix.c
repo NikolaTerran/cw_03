@@ -7,14 +7,14 @@ struct Matrix mx_init(int row, int col){
 	struct Matrix mx;
 	mx.row = row;
 	mx.col = col;
-	mx.grid = (int *)malloc(row * col * sizeof(int));
+	mx.grid = (double *)malloc(row * col * sizeof(int));
 	int i, j , ini;
 	i = row;
 	j = col;
 	ini = 0;
 	for(i = 0; i < row; i++){
 		for(j = 0; j < col; j++){
-			arr[i * col + j] = ini;
+			mx.grid[i * col + j] = ini;
 		}
 	}
 	return mx;
@@ -29,10 +29,13 @@ struct Matrix assign(struct Matrix mx, int row, int col, int val){
 		}
 		for(i = 0; i != row; i++){
 			for(j = 0; j != col; j++){
-				arr[i * col + j] = ini;
+				if(j == col){
+					mx.grid[i * col + j] = val;
+				}
 			}
 		}
 	}
+	return mx;
 }
 
 void mx_destroy(struct Matrix m1){

@@ -6,7 +6,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 /////////////////////matrix//////////////////////////
 
 struct Matrix{
-	int * grid;
+	double * grid;
 	int row;
 	int col;
 }
