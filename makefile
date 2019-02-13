@@ -1,4 +1,4 @@
-all: main.c line.h
+all: main.c engine.h
 	gcc main.c
 	
 run:

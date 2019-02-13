@@ -14,11 +14,18 @@ z0 , z1 ...
 Matrix Multiplication
 A x B != B x A
 # OF cols in A = # of rows in B
-[a b c] x [1] = [1a + 2b + 3c] 
+[a][b][c] x [1] = [1a + 2b + 3c] 
  1 x 3    [2]     1    x   1
           [3]    row A    col B
           3 x 1
 
-[a b c] x [1 4] = [1a + 2b + 3c]
-          [2 5]   [4a + 5b + 6c]
-          [3 6]        1 x 2
+[a][b][c] x [1 4] = [1a + 2b + 3c][4a + 5b + 6c]
+            [2 5]             1 x 2
+            [3 6]        
+
+[a][b][c]   [1][4]   [1a + 2b + 3c][4a + 5b + 6c]
+[d][e][f] x [2][5] = [1d + 2e + 3f][4d + 5e + 6f]
+[g][h][i]   [3][6]   [1g + 2h + 3i][4g + 5h + 6i]
+
+multiplicative identity
+I x A = A
