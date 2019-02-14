@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <time.h>
 #include "engine.h"
 
 
@@ -197,53 +191,33 @@ void push(int array[][500][3],int file){
 		}
 }
 
+
 int main(){
 
+// important variables
+/*
 int fd, i, j , k;
 int rgb[3];
 
-rgb[0] = 255;
-rgb[1] = 255;
-rgb[2] = 255;
+// getting the file setup
 
 int array[500][500][3];
 
 fd = open("image.ppm", O_CREAT | O_TRUNC | O_WRONLY, 0644);
 
-//initialize 
+rgb[0] = 255;
+rgb[1] = 255;
+rgb[2] = 255;
 
 initialize(array,rgb);
+*/
 
-//do stuff
+// randomly drawing stuff
 
-//make line red
+/*
 rgb[0] = 255;
 rgb[1] = 0;
 rgb[2] = 0;
-/*
-int size = 400;
-int * buffer = sys_random(size);
-
-i = 0;
-while(i < 700){
-	int x_1 = buffer[i] % 500;
-	i++;
-	int y_1 = buffer[i] % 500;
-	i++;
-	int x_2 = buffer[i] % 500;
-	i++;
-	int y_2 = buffer[i] % 500;
-	i++;
-	/*
-	rgb[0] = buffer[i] % 255;
-	i++;
-	rgb[0] = buffer[i] % 255;
-	i++;
-	rgb[0] = buffer[i] % 255;
-	i++;
-	*//*
-	drawLine(array, x_1 , y_1, x_2, y_2, rgb);
-}*/
 
 srand(time(NULL));
 i = 0;
@@ -259,7 +233,19 @@ rgb[2] = rand() % 255;
 drawLine(array, x_1, y_1, x_2, y_2, rgb);
 i++;
 }
+*/
+// matrix stuff
+struct Matrix m1;
+m1 = mx_init(4,10);
+int r,c;
+for(r = 0; r < m1.row; r++){
+	for(c = 0; c < m1.col; c++){
+		m1 = mx_assign(m1,r,c, 1);
+	}
+}
+mx_print(m1);
 
-push(array,fd);
+// last step
+	//push(array,fd);
 
 }
