@@ -20,9 +20,15 @@ struct Matrix{
 void mx_print(struct Matrix m1);
 struct Matrix mx_iden(struct Matrix m1);
 struct Matrix mx_init(int row, int col);
-struct Matrix mx_assign(struct Matrix mx, int row, int col, int val);
+double mx_get(struct Matrix mx, int row, int col);
+struct Matrix mx_set(struct Matrix mx, int row, int col, double val);
 void mx_destroy(struct Matrix m1);
 
 ////////////////////general//////////////////////////
 void initialize(int array[][500][3], int color[]);
 void push(int array[][500][3],int file);
+int* sys_random(int size);
+void db(char * say,double a);
+
+
+
