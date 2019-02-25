@@ -31,7 +31,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 2: //up right
 					if(slope > m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -40,7 +40,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						x3 ++;
 						y3 --;
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -52,7 +52,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 3: //up left
 					if(slope < m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -61,7 +61,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						x3 --;
 						y3 --;
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -73,7 +73,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 4: //left up
 					if(slope < m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -82,7 +82,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						
 						x3 --;
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -94,7 +94,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 5: //left down
 					if(slope > m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -102,7 +102,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						array[y3][x3][2] = color[2];
 						x3 --;
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -114,7 +114,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 6: //down left
 					if(slope < m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -122,7 +122,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						array[y3][x3][2] = color[2];
 						y3 ++;
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -134,7 +134,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 7: //down right
 					if(slope > m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -143,7 +143,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						y3 ++;
 						
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -155,7 +155,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 			break;
 			case 8: //right down
 					if(slope < m){
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -163,7 +163,7 @@ void line_helper(int array[][500][3], int x1, int y1, int x2, int y2, int x3, in
 						array[y3][x3][2] = color[2];
 						x3 ++;
 					}else{
-						db("slope",slope);
+						//db("slope",slope);
 						//db("y3",y3);
 						//db("x3",x3);
 						array[y3][x3][0] = color[0];
@@ -187,7 +187,7 @@ int drawLine(int array[][500][3], int x1 , int y1, int x2, int y2, int color[]){
 	}else{
 				//{double m = 1;}
 			double m = ((double)y1 - (double)y2) / ((double)x2 - (double)x1);
-			db("m",m);
+			//db("m",m);
 			
 				if(y2 <= y1){
 					if(x2 >= x1){
@@ -219,12 +219,12 @@ int drawLine(int array[][500][3], int x1 , int y1, int x2, int y2, int color[]){
 					}
 				}
 				
-				db("octants",(double)octants);
+				//db("octants",(double)octants);
 				
 				array[y1][x1][0] = color[0];
 				array[y1][x1][1] = color[1];
 				array[y1][x1][2] = color[2];
-				db("lol",(double)octants);
+				//db("lol",(double)octants);
 				switch(octants){
 						case 1: line_helper(array,x1,y1,x2,y2,x1 + 1,y1 - 1,octants,color,m);
 						break;
