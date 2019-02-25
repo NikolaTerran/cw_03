@@ -21,7 +21,7 @@ void mx_printf(struct Matrix mx){
 		}
 		printf("]\n");
 	}
-	mx_free(mx);
+	//mx_free(mx);
 }
 
 struct Matrix mx_init(int row, int col){
@@ -160,7 +160,9 @@ struct Matrix mx_qac(struct Matrix mx, double arr[], int size){
 }
 
 void mx_free(struct Matrix mx){
+	/*
 	free(mx.grid);
+	*/
 }
 
 //defaut 7 row Matrix
