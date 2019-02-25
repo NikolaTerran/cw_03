@@ -18,12 +18,19 @@ struct Matrix{
 };
 
 void mx_print(struct Matrix m1);
-struct Matrix mx_iden(struct Matrix m1);
+void mx_printf(struct Matrix mx);
+struct Matrix mx_iden(struct Matrix m1, int ba);
 struct Matrix mx_init(int row, int col);
 double mx_get(struct Matrix mx, int row, int col);
 struct Matrix mx_set(struct Matrix mx, int row, int col, double val);
-void mx_destroy(struct Matrix m1);
-
+struct Matrix mx_mult(struct Matrix m1, struct Matrix m2);
+void mx_free(struct Matrix mx);
+struct Matrix mx_addc(struct Matrix m1, struct Matrix m2);
+struct Matrix mx_qac(struct Matrix mx, double arr[],int size);
+struct Matrix mx_rmc(struct Matrix mx);
+struct Matrix addpoint(struct Matrix mx, double a, double b, double c, double red, double green, double blue);
+struct Matrix addedge(struct Matrix mx, double a, double b, double c, double d, double e, double f, double red, double green, double blue);
+void mx_export(struct Matrix mx);
 ////////////////////general//////////////////////////
 void initialize(int array[][500][3], int color[]);
 void push(int array[][500][3],int file);
